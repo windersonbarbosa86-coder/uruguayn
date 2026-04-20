@@ -3,168 +3,184 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Uruguayn - Canal Infantil</title><style>
-    body {
-        margin: 0;
-        font-family: Comic Sans MS, Arial, sans-serif;
-        background-color: white;
-        overflow-x: hidden;
-    }
+body {
+    margin: 0;
+    font-family: Comic Sans MS, Arial;
+    background: white;
+    cursor: url('CURSOR_AQUI.cur'), auto;
+}
 
-    /* Círculos decorativos */
-    .circle {
-        position: fixed;
-        width: 120px;
-        height: 120px;
-        background-color: #4da6ff;
-        border-radius: 50%;
-        opacity: 0.2;
-        z-index: -1;
-    }
+/* Fundo com círculos */
+.circle {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    background: #4da6ff;
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: -1;
+}
+.left { left: -60px; }
+.right { right: -60px; }
+.c1 { top: 100px; }
+.c2 { top: 300px; }
+.c3 { top: 500px; }
 
-    .left { left: -60px; }
-    .right { right: -60px; }
+/* Layout estilo tabela (bem 90s) */
+.main {
+    width: 900px;
+    margin: auto;
+    border: 3px solid #4da6ff;
+    background: #ffffff;
+}
 
-    .c1 { top: 100px; }
-    .c2 { top: 300px; }
-    .c3 { top: 500px; }
+/* Header */
+.header {
+    background: #4da6ff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
 
-    /* Navegação */
-    .nav {
-        background-image: url('SUA_IMAGEM_DE_NAVEGACAO_AQUI');
-        background-size: cover;
-        padding: 20px;
-        text-align: center;
-    }
+/* Navegação */
+.nav {
+    background-image: url('SUA_IMAGEM_NAV');
+    text-align: center;
+    padding: 15px;
+}
 
-    .nav a {
-        display: inline-block;
-        margin: 10px;
-        padding: 10px 20px;
-        background: #4da6ff;
-        color: white;
-        text-decoration: none;
-        border-radius: 10px;
-        font-weight: bold;
-    }
+.nav button {
+    margin: 5px;
+    padding: 10px;
+    background: yellow;
+    border: 2px solid blue;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-    .nav a:hover {
-        background: #1e90ff;
-    }
+/* Conteúdo */
+.section {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
 
-    /* Container */
-    .container {
-        max-width: 1000px;
-        margin: auto;
-        padding: 20px;
-        text-align: center;
-    }
+.active {
+    display: block;
+}
 
-    /* TV */
-    .tv {
-        margin: 30px auto;
-    }
+/* TV */
+.tv img { max-width: 100%; }
 
-    .tv img {
-        max-width: 100%;
-    }
+/* Programação */
+.schedule {
+    background: #e6f2ff;
+    padding: 10px;
+    border: 2px dashed #4da6ff;
+}
 
-    /* Programação */
-    .schedule img {
-        width: 100%;
-        max-width: 800px;
-    }
+/* Desenhos */
+.shows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
 
-    /* Lista de desenhos */
-    .shows {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+.show {
+    width: 160px;
+    background: #f0f8ff;
+    border: 2px solid #4da6ff;
+    padding: 10px;
+}
 
-    .show {
-        width: 180px;
-        background: #f0f8ff;
-        border-radius: 15px;
-        padding: 10px;
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    }
+.show img { width: 100%; }
 
-    .show img {
-        width: 100%;
-        border-radius: 10px;
-    }
+/* Rodapé */
+.footer {
+    background: #4da6ff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
 
-    .show h3 {
-        font-size: 16px;
-    }
+/* GIF piscando */
+.blink {
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    50% { opacity: 0; }
+}
 
-    /* Página de desenho */
-    .show-page {
-        display: none;
-        padding: 20px;
-    }
-
-    footer {
-        margin-top: 40px;
-        padding: 20px;
-        background: #4da6ff;
-        color: white;
-    }
 </style></head><body><!-- Círculos --><div class="circle left c1"></div>
 <div class="circle left c2"></div>
-<div class="circle left c3"></div><div class="circle right c1"></div>
+<div class="circle left c3"></div>
+<div class="circle right c1"></div>
 <div class="circle right c2"></div>
-<div class="circle right c3"></div><!-- Navegação --><div class="nav">
-    <a href="#">BOTÃO 1</a>
-    <a href="#">BOTÃO 2</a>
-    <a href="#">BOTÃO 3</a>
-    <a href="#">BOTÃO 4</a>
-</div><!-- Conteúdo principal --><div class="container"><!-- TV -->
-<div class="tv">
-    <img src="SUA_IMAGEM_DA_TV_AQUI" alt="TV">
-</div>
+<div class="circle right c3"></div><div class="main"><div class="header">
+    <h1>🌟 URUGUAYN 🌟</h1>
+    <marquee>Bem-vindo ao melhor canal infantil!</marquee>
+</div><div class="nav">
+    <button onclick="showSection('home')">INÍCIO</button>
+    <button onclick="showSection('programacao')">PROGRAMAÇÃO</button>
+    <button onclick="showSection('desenhos')">DESENHOS</button>
+    <button onclick="showSection('jogos')">JOGOS</button>
+    <button onclick="showSection('contato')">CONTATO</button>
+</div><!-- HOME --><div id="home" class="section active">
+    <h2 class="blink">🔴 AO VIVO</h2>
+    <div class="tv">
+        <img src="SUA_TV_AQUI">
+    </div>
+    <p>Agora passando: SEU_DESENHO_AQUI</p>
+</div><!-- PROGRAMAÇÃO --><div id="programacao" class="section">
+    <h2>📅 Programação</h2>
+    <div class="schedule">
+        <p>SEGUNDA A SEXTA</p>
+        <p>08:00 - DESENHO 1</p>
+        <p>09:00 - DESENHO 2</p>
+        <p>10:00 - DESENHO 3</p>
+        <hr>
+        <p>SÁBADO</p>
+        <p>08:00 - ESPECIAL</p>
+    </div>
+</div><!-- DESENHOS --><div id="desenhos" class="section">
+    <h2>🧸 Desenhos</h2>
+    <div class="shows"><div class="show">
+        <img src="IMG1">
+        <p>TÍTULO 1</p>
+        <button onclick="alert('Página personalizada aqui!')">VER</button>
+    </div>
 
-<!-- Programação -->
-<div class="schedule">
-    <h2>Grade de Programação</h2>
-    <img src="SUA_IMAGEM_DA_PROGRAMACAO_AQUI" alt="Programação">
-</div>
-
-<!-- Desenhos -->
-<h2>Desenhos</h2>
-<div class="shows">
-
-    <!-- EXEMPLO DE DESENHO -->
     <div class="show">
-        <img src="IMAGEM_DO_DESENHO_AQUI" alt="Desenho">
-        <h3>TÍTULO DO DESENHO</h3>
-        <button onclick="openShow('show1')">Ver mais</button>
+        <img src="IMG2">
+        <p>TÍTULO 2</p>
+        <button onclick="alert('Página personalizada aqui!')">VER</button>
     </div>
 
 </div>
 
-</div><!-- Página interna do desenho --><div id="show1" class="show-page">
-    <h1>TÍTULO DO DESENHO</h1>
-    <p>DESCRIÇÃO PERSONALIZADA</p><h3>Horários</h3>
-<p>VOCÊ PERSONALIZA AQUI</p>
-
-<h3>Semana</h3>
-<p>VOCÊ PERSONALIZA AQUI</p>
-
-<button onclick="closeShow('show1')">Voltar</button>
-
-</div><footer>
-    <p>© Uruguayn - Canal Infantil</p>
-</footer><script>
-function openShow(id) {
-    document.querySelector('.container').style.display = 'none';
-    document.getElementById(id).style.display = 'block';
-}
-
-function closeShow(id) {
-    document.querySelector('.container').style.display = 'block';
-    document.getElementById(id).style.display = 'none';
+</div><!-- JOGOS --><div id="jogos" class="section">
+    <h2>🎮 Jogos</h2>
+    <p>EM BREVE!!!</p>
+    <img src="GIF_EM_CONSTRUCAO.gif">
+</div><!-- CONTATO --><div id="contato" class="section">
+    <h2>💌 Fale Conosco</h2>
+    <form>
+        <input type="text" placeholder="Nome"><br><br>
+        <input type="email" placeholder="Email"><br><br>
+        <textarea placeholder="Mensagem"></textarea><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</div><div class="footer">
+    <p>Visitantes: 000123</p>
+    <p>© Uruguayn</p>
+</div></div><!-- Música --><audio autoplay loop>
+    <source src="MUSICA.mp3" type="audio/mpeg">
+</audio><script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
 }
 </script></body>
 </html>
