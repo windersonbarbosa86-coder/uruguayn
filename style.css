@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Comic Sans MS, Arial;
+    background: white;
+    cursor: url('CURSOR_AQUI.cur'), auto;
+}
+
+/* Fundo com círculos */
+.circle {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    background: #4da6ff;
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: -1;
+}
+.left { left: -60px; }
+.right { right: -60px; }
+.c1 { top: 100px; }
+.c2 { top: 300px; }
+.c3 { top: 500px; }
+
+/* Layout estilo tabela (bem 90s) */
+.main {
+    width: 900px;
+    margin: auto;
+    border: 3px solid #4da6ff;
+    background: #ffffff;
+}
+
+/* Header */
+.header {
+    background: #4da6ff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Navegação */
+.nav {
+    background-image: url('SUA_IMAGEM_NAV');
+    text-align: center;
+    padding: 15px;
+}
+
+.nav button {
+    margin: 5px;
+    padding: 10px;
+    background: yellow;
+    border: 2px solid blue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Conteúdo */
+.section {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+.active {
+    display: block;
+}
+
+/* TV */
+.tv img { max-width: 100%; }
+
+/* Programação */
+.schedule {
+    background: #e6f2ff;
+    padding: 10px;
+    border: 2px dashed #4da6ff;
+}
+
+/* Desenhos */
+.shows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.show {
+    width: 160px;
+    background: #f0f8ff;
+    border: 2px solid #4da6ff;
+    padding: 10px;
+}
+
+.show img { width: 100%; }
+
+/* Rodapé */
+.footer {
+    background: #4da6ff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* GIF piscando */
+.blink {
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    50% { opacity: 0; }
+}
