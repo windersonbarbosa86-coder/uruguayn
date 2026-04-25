@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 <title>Uruguayn - Canal Infantil</title>
-</head><body><!-- Círculos --><div class="circle left c1"></div>
+</head><body><!-- Circles --><div class="circle left c1"></div>
 <div class="circle left c2"></div>
 <div class="circle left c3"></div>
 <div class="circle right c1"></div>
@@ -16,18 +16,18 @@
     <marquee>Bienvenidos al mejor canal infantil!</marquee>
 </div><div class="nav">
     <button onclick="showSection('home')"><i class="fa-solid fa-house"></i></button>
-    <button onclick="showSection('cronograma')"><i class="fa-solid fa-calendar"></i></button>
-    <button onclick="showSection('dibujos')"><i class="fa-solid fa-pager"></i></button>
-    <button onclick="showSection('juegos')"><i class="fa-solid fa-gamepad"></i></button>
-    <button onclick="showSection('contato')"><i class="fa-solid fa-envelope"></i></button>
+    <button onclick="showSection('schedule')"><i class="fa-solid fa-calendar"></i></button>
+    <button onclick="showSection('cartoons')"><i class="fa-solid fa-pager"></i></button>
+    <button onclick="showSection('games')"><i class="fa-solid fa-gamepad"></i></button>
+    <button onclick="showSection('contact')"><i class="fa-solid fa-envelope"></i></button>
 </div><!-- HOME --><div id="home" class="section active">
     <h2 class="blink">🔴 EN VIVO</h2>
     <div class="tv">
         <img src="img/tv.png" width="300">
     </div>
-    <p>Ahora emitindo: POLOCHON</p>
-</div><!-- CRONOGRAMA --><div id="cronograma" class="section">
-    <h2>📅 Programação</h2>
+    <p>Ahora emitiendo: POLOCHON</p>
+</div><!-- Schedule --><div id="schedule" class="section">
+    <h2>📅 Programación</h2>
     <div class="schedule">
         <p>LUNES A VIERNES</p>
         <p>06:00 - Looney Tunes</p>
@@ -76,7 +76,7 @@
         <p>SÁBADOS</p>
         <p>08:00 - ESPECIAL</p>
     </div>
-</div><!-- DIBUJOS --><div id="dibujos" class="section">
+</div><!-- Cartoons --><div id="cartoons" class="section">
     <h2>🧸 Dibujos</h2>
     <div class="shows"><div class="show">
         <img src="img/dibujos/looneytunes.png" width="120">
@@ -96,22 +96,22 @@
         <button onclick="alert('monica')">VER</button>
 </div>
 
-</div><!-- JUEGOS --><div id="juegos" class="section">
+</div><!-- GAMES --><div id="games" class="section">
     <h2>🎮 Juegos</h2>
-    <p>EN CONSTRUCÇIÓN!!!</p>
+    <p>EN CONSTRUCCIÓN!!!</p>
     <img src="GIF_EN_CONSTRUCÇIÓN.gif">
-</div><!-- CONTATO --><div id="contato" class="section">
-    <h2>💌 Contato</h2>
+</div><!-- CONTACT --><div id="contacto" class="section">
+    <h2>💌 Contacto</h2>
     <form>
         <input type="text" placeholder="Nombre"><br><br>
         <input type="email" placeholder="Email"><br><br>
-        <textarea placeholder="Mensagem"></textarea><br><br>
+        <textarea placeholder="Mensaje"></textarea><br><br>
         <button type="submit">Enviar</button>
     </form>
 </div><div class="footer">
-    <p>Visitantes: 000123</p>
+    <p>Visitantes: 000126</p>
     <p>© Uruguayn</p>
-</div></div><!-- Música --><audio autoplay loop>
+</div></div><!-- Music --><audio autoplay loop>
     <source src="MUSICA.mp3" type="audio/mpeg">
 </audio><script>
 function showSection(id) {
